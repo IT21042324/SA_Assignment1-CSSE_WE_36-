@@ -7,8 +7,8 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 
 import menu.Menu;
-import recordsProvider.RecordServiceComplaintImp;
-import recordsProvider.RecordServiceRequestImp;
+import recordsProvider.RecordServiceComplaintInterface;
+import recordsProvider.RecordServiceRequestInterface;
 
 public class Activator implements BundleActivator {
 
@@ -28,11 +28,12 @@ public class Activator implements BundleActivator {
 
 		myScanner = new Scanner(System.in);
 
-		servRefRequest = context.getServiceReference(RecordServiceRequestImp.class.getName());
-		RecordServiceRequestImp recordServiceRequest = (RecordServiceRequestImp) context.getService(servRefRequest);
+		servRefRequest = context.getServiceReference(RecordServiceRequestInterface.class.getName());
+		RecordServiceRequestInterface recordServiceRequest = (RecordServiceRequestInterface) context
+				.getService(servRefRequest);
 
-		servRefComplaint = context.getServiceReference(RecordServiceComplaintImp.class.getName());
-		RecordServiceComplaintImp recordServiceComplaint = (RecordServiceComplaintImp) context
+		servRefComplaint = context.getServiceReference(RecordServiceComplaintInterface.class.getName());
+		RecordServiceComplaintInterface recordServiceComplaint = (RecordServiceComplaintInterface) context
 				.getService(servRefComplaint);
 
 		boolean shouldExit = false;

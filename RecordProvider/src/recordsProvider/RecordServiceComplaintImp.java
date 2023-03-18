@@ -2,7 +2,7 @@ package recordsProvider;
 
 import java.util.ArrayList;
 
-public class RecordServiceComplaintImp implements RecordServiceInterface {
+public class RecordServiceComplaintImp implements RecordServiceComplaintInterface {
 	private ArrayList<ArrayList<Object>> complaintList = new ArrayList<>();
 
 	public RecordServiceComplaintImp() {

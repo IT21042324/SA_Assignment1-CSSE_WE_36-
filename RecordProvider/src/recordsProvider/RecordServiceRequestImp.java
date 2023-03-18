@@ -2,7 +2,7 @@ package recordsProvider;
 
 import java.util.ArrayList;
 
-public class RecordServiceRequestImp implements RecordServiceInterface {
+public class RecordServiceRequestImp implements RecordServiceRequestInterface {
 
 	private static ArrayList<ArrayList<Object>> requestList = new ArrayList<>();
 	private int custID;

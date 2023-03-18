@@ -21,10 +21,10 @@ public class Activator implements BundleActivator {
 
 		System.out.println("Starting Record Services");
 
-		servRegLogin = bundleContext.registerService(Login.class.getName(), new Login(), null);
-		servRegRequest = bundleContext.registerService(RecordServiceRequestImp.class.getName(),
+		servRegLogin = bundleContext.registerService(LoginI.class.getName(), new Login(), null);
+		servRegRequest = bundleContext.registerService(RecordServiceRequestInterface.class.getName(),
 				new RecordServiceRequestImp(), null);
-		servRegComplaint = bundleContext.registerService(RecordServiceComplaintImp.class.getName(),
+		servRegComplaint = bundleContext.registerService(RecordServiceComplaintInterface.class.getName(),
 				new RecordServiceComplaintImp(), null);
 	}
 
